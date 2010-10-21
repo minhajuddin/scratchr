@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"> </script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(function(){
+          $("#default-text").val(getDefaultText());
+          $("#default-duration").val(getDefaultDuration());
+          $("#set-default-text").click(function(){
+            setDefaultDuration($("#default-duration").val());
+            setDefaultText($("#default-text").val());
+            alert('defaults configured');
+            });
+          });
+    </script>
+    <title>Quickr &raquo; Options</title>
+  </head>
+  <body>
+    <div id="options-wrapper">
+      <h1>Quickr</h1>
+      Default Duration <input type='text' id='default-duration' />
+      <br />
+      Default Text <input type='text' id='default-text' />
+      <input type='button' id='set-default-text' value='Set Defaults' />
+    </div>
+  </body>
+</html>
+
